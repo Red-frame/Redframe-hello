@@ -1,6 +1,3 @@
-# Redframe-hello
-
-
 # Example PyPI Package Project
 
 This is a example project to demonstrate how to create a Python package and publish it to PyPI.
@@ -61,14 +58,16 @@ To write the setup.py file, you will need to include information about your pack
 from setuptools import setup, find_packages
 
 setup(
-    name='Redframe_hello,
-    version='0.0.1',
+    name="Redframe_hello",
+    version="0.0.5",
     packages=find_packages(),
-    install_requires=[
-        # Add dependencies here.
-        # e.g. 'numpy>=1.11.1'
-        # flask
-    ],
+    description="This is a example project to demonstrate how to create a Python package and publish it to PyPI by Redframe",
+packages=find_packages(),
+classifiers=[
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+],
 )
 ```
 
@@ -99,7 +98,7 @@ Before publishing your Python package, it's crucial to test it locally to ensure
 3. Run the following command to install your package locally.
 
 ```bash
-pip install dist/Redframe_hello-0.1-py3-none-any.whl
+pip install dist/Redframe_hello-0.0.5-py3-none-any.whl
 ```
 
 Replace the package name with the actual name and version of your package. Once the installation is complete, you can now test your package by importing it in a Python script or interactive session and using its functionality.
@@ -124,7 +123,7 @@ setup(
     ...
     entry_points={
         "console_scripts": [
-            "Redframe-hello = Redframe_hello:hello",
+            "Redframe_hello = Redframe_hello:hello",
         ],
     },
 )
@@ -145,9 +144,10 @@ pip install Redframe-hello
 ```
 
 ## Useful Links
-- [https://github.com/Red-frame/Redframe-hello/](Redframe hello)
+- [Red-frame](https://github.com/Red-frame/)
 - [Python Packaging User Guide](https://packaging.python.org/)
 - [setuptools documentation](https://setuptools.readthedocs.io/)
 - [wheel documentation](https://wheel.readthedocs.io/)
 - [twine documentation](https://twine.readthedocs.io/)
 - [PyPI](https://pypi.org/)
+- 
